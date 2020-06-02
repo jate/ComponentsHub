@@ -1,43 +1,85 @@
 import Foundation
 
-final public class ComponentsHub {
+public struct ComponentsHub {
 
-    public static let shared = ComponentsHub()
+    public static var shared = ComponentsHub()
 
     private init() {
 
     }
 
-    var protocolClosures = [String : () -> Any]()
+    private var instancesClosures = [String : () -> Any]()
+
+    private var singletons = [String : Any]()
 
 }
 
 extension ComponentsHub {
 
     @discardableResult
-    public func register<T>(protocol: T.Type, _ instanceClosure: @escaping () -> T) -> Bool {
+    public mutating func register<T>(protocol: T.Type, singleton: Bool = false, _ instanceClosure: @escaping () -> T) -> Bool {
 
         let key = "\(`protocol`)"
 
         // TODO: add main thread check
         // TODO: Need lock
-        protocolClosures[key] = instanceClosure
 
+        if checkExsit(key: key) {
+            print("ComponentsHub - register protocol \(key) aleady exsits!")
+            return false
+        }
+
+        if singleton {
+            singletons[key] = instanceClosure()
+        } else {
+            instancesClosures[key] = instanceClosure
+        }
         return true
     }
 
     @discardableResult
-    public func unRegister<T>(protocol: T.Type) -> Bool {
+    public mutating func unregister<T>(protocol: T.Type) -> Bool {
 
         let key = "\(`protocol`)"
 
-        guard let _ = protocolClosures[key] else {
+        // TODO: add main thread check
+        // TODO: Need lock
+
+        if let _ = singletons[key] {
+            singletons[key] = nil
+            return true
+        }
+        if let _ = instancesClosures[key] {
+            instancesClosures[key] = nil
             return true
         }
 
-        // TODO: add main thread check
-        // TODO: Need lock
-        protocolClosures[key] = nil
-        return true
+        print("ComponentsHub - unregister the protocol \(key) not exsit.")
+        return false
+    }
+
+    public func get<T>(protocol: T.Type) -> T? {
+        let key = "\(`protocol`)"
+
+        if let obj = singletons[key] {
+            return obj as? T
+        }
+        if let closure = instancesClosures[key] {
+            return closure() as? T
+        }
+
+        print("ComponentsHub - get the protocol \(key) not exsit.")
+        return nil
+    }
+
+}
+
+extension ComponentsHub {
+    func checkExsit(key: String) -> Bool {
+        if let _ = singletons[key],
+            let _ = instancesClosures[key] {
+            return true
+        }
+        return false
     }
 }

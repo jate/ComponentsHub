@@ -17,11 +17,7 @@ public protocol ComponentAProtocol {
 extension ComponentsHub {
     public var comA: ComponentAProtocol? {
         get {
-            let key = "\(ComponentAProtocol.self)"
-            guard let closure = protocolClosures[key] else {
-                return nil
-            }
-            return closure() as? ComponentAProtocol
+            get(protocol: ComponentAProtocol.self)
         }
     }
 }

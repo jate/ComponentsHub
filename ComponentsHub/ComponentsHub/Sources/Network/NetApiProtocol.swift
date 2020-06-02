@@ -19,11 +19,7 @@ public protocol NetApiProtocol {
 extension ComponentsHub {
     public var netApi: NetApiProtocol? {
         get {
-            let key = "\(NetApiProtocol.self)"
-            guard let closure = protocolClosures[key] else {
-                return nil
-            }
-            return closure() as? NetApiProtocol
+            get(protocol: NetApiProtocol.self)
         }
     }
 }

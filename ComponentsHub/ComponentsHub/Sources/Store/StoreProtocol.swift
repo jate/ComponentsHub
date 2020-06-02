@@ -20,11 +20,7 @@ public protocol StoreProtocol {
 extension ComponentsHub {
     public var store: StoreProtocol? {
         get {
-            let key = "\(StoreProtocol.self)"
-            guard let closure = protocolClosures[key] else {
-                return nil
-            }
-            return closure() as? StoreProtocol
+            get(protocol: StoreProtocol.self)
         }
     }
 }

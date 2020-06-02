@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+import ComponentsHub
+
 public protocol ComponentAProtocol {
     func getComponentAMainViewController(title: String) -> UIViewController
 }

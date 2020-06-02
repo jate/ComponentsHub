@@ -7,6 +7,8 @@
 
 import Foundation
 
+import ComponentsHub
+
 public protocol StoreProtocol {
 
     func addOrUpdate(data: Data) -> Bool

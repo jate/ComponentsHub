@@ -12,10 +12,6 @@
 		4700542724862963002E5670 /* ComponentsHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 4700541924862963002E5670 /* ComponentsHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4700543724862A73002E5670 /* ComponentHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700543424862A73002E5670 /* ComponentHub.swift */; };
 		4700543824862A73002E5670 /* ComponentHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700543424862A73002E5670 /* ComponentHub.swift */; };
-		4700543924862A73002E5670 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700543624862A73002E5670 /* StoreProtocol.swift */; };
-		4700543A24862A73002E5670 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700543624862A73002E5670 /* StoreProtocol.swift */; };
-		470054DC248631CC002E5670 /* NetApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470054DB248631CC002E5670 /* NetApiProtocol.swift */; };
-		4700550224863C83002E5670 /* ComponentAProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700550124863C83002E5670 /* ComponentAProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +32,6 @@
 		4700542424862963002E5670 /* ComponentsHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsHubTests.swift; sourceTree = "<group>"; };
 		4700542624862963002E5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4700543424862A73002E5670 /* ComponentHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentHub.swift; sourceTree = "<group>"; };
-		4700543624862A73002E5670 /* StoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
-		470054DB248631CC002E5670 /* NetApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetApiProtocol.swift; sourceTree = "<group>"; };
-		4700550124863C83002E5670 /* ComponentAProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,43 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				4700543424862A73002E5670 /* ComponentHub.swift */,
-				4700543124862A73002E5670 /* ComponentB */,
-				4700543324862A73002E5670 /* ComponentA */,
-				4700543224862A73002E5670 /* Network */,
-				4700543524862A73002E5670 /* Store */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		4700543124862A73002E5670 /* ComponentB */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ComponentB;
-			sourceTree = "<group>";
-		};
-		4700543224862A73002E5670 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				470054DB248631CC002E5670 /* NetApiProtocol.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		4700543324862A73002E5670 /* ComponentA */ = {
-			isa = PBXGroup;
-			children = (
-				4700550124863C83002E5670 /* ComponentAProtocol.swift */,
-			);
-			path = ComponentA;
-			sourceTree = "<group>";
-		};
-		4700543524862A73002E5670 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				4700543624862A73002E5670 /* StoreProtocol.swift */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4700543724862A73002E5670 /* ComponentHub.swift in Sources */,
-				4700550224863C83002E5670 /* ComponentAProtocol.swift in Sources */,
-				4700543924862A73002E5670 /* StoreProtocol.swift in Sources */,
-				470054DC248631CC002E5670 /* NetApiProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +217,6 @@
 			files = (
 				4700542524862963002E5670 /* ComponentsHubTests.swift in Sources */,
 				4700543824862A73002E5670 /* ComponentHub.swift in Sources */,
-				4700543A24862A73002E5670 /* StoreProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +362,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ComponentsHub/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = JX.ComponentsHub;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -433,12 +388,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ComponentsHub/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = JX.ComponentsHub;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

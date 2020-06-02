@@ -8,6 +8,8 @@
 
 import Foundation
 
+import ComponentsHub
+
 public protocol NetApiProtocol {
 
     var scheme: String { get }

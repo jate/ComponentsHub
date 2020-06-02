@@ -1,5 +1,6 @@
 # ComponentsHub
 
+## 背景
 在各种业务与组件不断增长的时候，他们之间的各种依赖关系显得尤其复杂。
 
 且使用Cocoapods或Carthage等管理使得各个模块趋于独立化。如果一个静态库被多个模块依赖，会导致这个静态库被多次包含在可执行文件中，增加了App包的体积。而大量使用动态库会导致App在冷启动时，加载动态库时间越来越长。
@@ -26,14 +27,27 @@
 ### Category治理
 linkmap tools 主要防止category的重复实现。
 
-## 二、TinyPart库 方法
-核心基于protocol-class方式。类似蘑菇街、RN等架构设计。
+## 二、protocol-class方式
+核心基于protocol-class方式。如TinyPart库等。类似蘑菇街、RN等架构设计。
 
+## 三、本库实现的纯Swift方案
 
-## 三、我自己的Swift方案
+![](组件通信图.png)
 
-基础库定义业务protocol，并支持注册闭包、获取、删除等操作。这样闭包可以理解为带输入输出的管道。例如，某App根据protocol获取闭包，然后传入参数（或者为空），返回值即支持protocol的实例对象，最后App就可以方便使用了。
+* 基础库ComponentsHub，使用单例支持协议的 注册闭包、获取、取消注册等操作。因为供多个库使用，故采用Dynamic Library，且Embed至其上层静态库以及App。
+	* 接收创建对应协议的闭包。
+	* 支持创建对应协议的单例。
+	* 【TODO】添加Router支持。
 
-模块库 依赖基础库，并提供initializeXXModule方法，该方法向基础库注册闭包，实现闭包，返回业务实现类实例，这里的类实例 就是基础库定义的protocol实现。
+* 定义ProtocolLibrary库，为为各种业务需求协议库。例如网络、存储、界面组件等。因为供多个库使用，故采用Dynamic Library，且Embed至其上层静态库以及App。
+	* 该库可以根据具体使用情况调整，不一定全部放一个库中。比如把基本不修改的协议单独放，经常修改的变为多个单独库等等。
 
+* 再就是各种业务或者基础库，如StoreLib、NetworLib、ComponentXXX等等。这些库可以设置为Static Library。且在App的link framework & library设置中去掉 Embed 标记。这样就会编译至App包中，减少App启动时加载动态库时间。
 
+* 在每一个实现ProtocolLibrary中的协议库，也就是业务或基础库，应该都有一个该库的initialComponents方法初始化配置对应协议的实现对象。然后这些初始化方法由App启动时刻调用。
+
+## 四、才疏学浅，求大神多多指教。
+期待 ：）
+
+## 五、如有使用问题怎么办？
+欢迎砸我邮箱 [jate_xu@icloud.com](mailto:jate_xu@icloud.com)

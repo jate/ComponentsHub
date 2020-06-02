@@ -10,7 +10,23 @@
 		470054FB24863C5D002E5670 /* ComponentA.h in Headers */ = {isa = PBXBuildFile; fileRef = 470054F924863C5D002E5670 /* ComponentA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4700550424863D6E002E5670 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700550324863D6E002E5670 /* MainView.swift */; };
 		4700550624863DC7002E5670 /* ComponentA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700550524863DC7002E5670 /* ComponentA.swift */; };
+		4700556624869226002E5670 /* ProtocolLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700556524869226002E5670 /* ProtocolLibrary.framework */; };
+		4700556724869226002E5670 /* ProtocolLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4700556524869226002E5670 /* ProtocolLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4700556824869226002E5670 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4700556724869226002E5670 /* ProtocolLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		470054F624863C5D002E5670 /* ComponentA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComponentA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +34,7 @@
 		470054FA24863C5D002E5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4700550324863D6E002E5670 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4700550524863DC7002E5670 /* ComponentA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentA.swift; sourceTree = "<group>"; };
+		4700556524869226002E5670 /* ProtocolLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4700556624869226002E5670 /* ProtocolLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +54,7 @@
 			children = (
 				470054F824863C5D002E5670 /* ComponentA */,
 				470054F724863C5D002E5670 /* Products */,
+				4700556424869226002E5670 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +75,14 @@
 				4700550324863D6E002E5670 /* MainView.swift */,
 			);
 			path = ComponentA;
+			sourceTree = "<group>";
+		};
+		4700556424869226002E5670 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4700556524869226002E5670 /* ProtocolLibrary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +107,7 @@
 				470054F224863C5D002E5670 /* Sources */,
 				470054F324863C5D002E5670 /* Frameworks */,
 				470054F424863C5D002E5670 /* Resources */,
+				4700556824869226002E5670 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +312,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = JX.ComponentA;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -311,6 +340,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = JX.ComponentA;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

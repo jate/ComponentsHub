@@ -7,7 +7,9 @@
 //
 
 import Foundation
+
 import ComponentsHub
+import ProtocolLibrary
 
 public class StoreLib {
 

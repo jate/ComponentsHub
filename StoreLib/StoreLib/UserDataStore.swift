@@ -9,6 +9,7 @@
 import Foundation
 
 import ComponentsHub
+import ProtocolLibrary
 
 class UserDataStore: StoreProtocol {
 

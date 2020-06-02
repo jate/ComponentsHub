@@ -10,7 +10,23 @@
 		470054D5248631A4002E5670 /* NetworkLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 470054D3248631A4002E5670 /* NetworkLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		470054E024863412002E5670 /* NetworkLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470054DF24863412002E5670 /* NetworkLib.swift */; };
 		470054E224863664002E5670 /* GithubApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470054E124863664002E5670 /* GithubApiService.swift */; };
+		4700556124869201002E5670 /* ProtocolLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700555E24869201002E5670 /* ProtocolLibrary.framework */; };
+		4700556224869201002E5670 /* ProtocolLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4700555E24869201002E5670 /* ProtocolLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4700556324869201002E5670 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4700556224869201002E5670 /* ProtocolLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		470054D0248631A4002E5670 /* NetworkLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +34,8 @@
 		470054D4248631A4002E5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		470054DF24863412002E5670 /* NetworkLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLib.swift; sourceTree = "<group>"; };
 		470054E124863664002E5670 /* GithubApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiService.swift; sourceTree = "<group>"; };
+		4700555D24869201002E5670 /* ComponentsHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentsHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4700555E24869201002E5670 /* ProtocolLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4700556124869201002E5670 /* ProtocolLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +55,7 @@
 			children = (
 				470054D2248631A4002E5670 /* NetworkLib */,
 				470054D1248631A4002E5670 /* Products */,
+				4700555C24869201002E5670 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +76,15 @@
 				470054E124863664002E5670 /* GithubApiService.swift */,
 			);
 			path = NetworkLib;
+			sourceTree = "<group>";
+		};
+		4700555C24869201002E5670 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4700555D24869201002E5670 /* ComponentsHub.framework */,
+				4700555E24869201002E5670 /* ProtocolLibrary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +109,7 @@
 				470054CC248631A4002E5670 /* Sources */,
 				470054CD248631A4002E5670 /* Frameworks */,
 				470054CE248631A4002E5670 /* Resources */,
+				4700556324869201002E5670 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +314,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = JX.NetworkLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -311,6 +342,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = JX.NetworkLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

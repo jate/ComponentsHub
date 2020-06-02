@@ -9,7 +9,7 @@
 import Foundation
 import Dispatch
 
-import ComponentsHub
+import ProtocolLibrary
 
 class GithubApiService : NetApiProtocol {
     

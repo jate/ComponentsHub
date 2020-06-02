@@ -15,12 +15,11 @@
 		470054B724862F1F002E5670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470054B524862F1F002E5670 /* LaunchScreen.storyboard */; };
 		470054C12486303F002E5670 /* ComponentsHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470054BF2486303F002E5670 /* ComponentsHub.framework */; };
 		470054C22486303F002E5670 /* ComponentsHub.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 470054BF2486303F002E5670 /* ComponentsHub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		470054C32486303F002E5670 /* StoreLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470054C02486303F002E5670 /* StoreLib.framework */; };
-		470054C42486303F002E5670 /* StoreLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 470054C02486303F002E5670 /* StoreLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		470054EA248639E8002E5670 /* NetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470054E9248639E8002E5670 /* NetworkLib.framework */; };
-		470054EB248639E8002E5670 /* NetworkLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 470054E9248639E8002E5670 /* NetworkLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4700550824864001002E5670 /* ComponentA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700550724864001002E5670 /* ComponentA.framework */; };
-		4700550924864001002E5670 /* ComponentA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4700550724864001002E5670 /* ComponentA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4700555424868B31002E5670 /* ProtocolLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700555324868B31002E5670 /* ProtocolLibrary.framework */; };
+		4700555524868B31002E5670 /* ProtocolLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4700555324868B31002E5670 /* ProtocolLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4700555624868DDE002E5670 /* ComponentA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700550724864001002E5670 /* ComponentA.framework */; };
+		4700555824868DE0002E5670 /* NetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470054E9248639E8002E5670 /* NetworkLib.framework */; };
+		4700555A24868DE2002E5670 /* StoreLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470054C02486303F002E5670 /* StoreLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,9 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4700550924864001002E5670 /* ComponentA.framework in Embed Frameworks */,
-				470054C42486303F002E5670 /* StoreLib.framework in Embed Frameworks */,
-				470054EB248639E8002E5670 /* NetworkLib.framework in Embed Frameworks */,
+				4700555524868B31002E5670 /* ProtocolLibrary.framework in Embed Frameworks */,
 				470054C22486303F002E5670 /* ComponentsHub.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -53,6 +50,7 @@
 		470054C02486303F002E5670 /* StoreLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StoreLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		470054E9248639E8002E5670 /* NetworkLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700550724864001002E5670 /* ComponentA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4700555324868B31002E5670 /* ProtocolLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4700550824864001002E5670 /* ComponentA.framework in Frameworks */,
-				470054C32486303F002E5670 /* StoreLib.framework in Frameworks */,
-				470054EA248639E8002E5670 /* NetworkLib.framework in Frameworks */,
+				4700555424868B31002E5670 /* ProtocolLibrary.framework in Frameworks */,
+				4700555624868DDE002E5670 /* ComponentA.framework in Frameworks */,
 				470054C12486303F002E5670 /* ComponentsHub.framework in Frameworks */,
+				4700555824868DE0002E5670 /* NetworkLib.framework in Frameworks */,
+				4700555A24868DE2002E5670 /* StoreLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +103,7 @@
 		470054BE2486303F002E5670 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4700555324868B31002E5670 /* ProtocolLibrary.framework */,
 				4700550724864001002E5670 /* ComponentA.framework */,
 				470054E9248639E8002E5670 /* NetworkLib.framework */,
 				470054BF2486303F002E5670 /* ComponentsHub.framework */,
@@ -333,7 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C59TVX3M53;
 				INFOPLIST_FILE = DemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C59TVX3M53;
 				INFOPLIST_FILE = DemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

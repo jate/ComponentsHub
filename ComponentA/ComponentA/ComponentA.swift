@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 import ComponentsHub
+import ProtocolLibrary
 
 public struct ComponentA : ComponentAProtocol {
 

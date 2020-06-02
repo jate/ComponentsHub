@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 import ComponentsHub
+import ProtocolLibrary
 
 class MainViewController: UIViewController {
 

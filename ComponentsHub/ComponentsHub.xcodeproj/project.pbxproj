@@ -10,8 +10,8 @@
 		4700542024862963002E5670 /* ComponentsHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700541624862963002E5670 /* ComponentsHub.framework */; };
 		4700542524862963002E5670 /* ComponentsHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700542424862963002E5670 /* ComponentsHubTests.swift */; };
 		4700542724862963002E5670 /* ComponentsHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 4700541924862963002E5670 /* ComponentsHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4700543724862A73002E5670 /* ComponentHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700543424862A73002E5670 /* ComponentHub.swift */; };
-		4700543824862A73002E5670 /* ComponentHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700543424862A73002E5670 /* ComponentHub.swift */; };
+		4700556C248734D7002E5670 /* ComponentHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700556B248734D7002E5670 /* ComponentHub.swift */; };
+		4700556D248734D7002E5670 /* ComponentHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700556B248734D7002E5670 /* ComponentHub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,7 @@
 		4700541F24862963002E5670 /* ComponentsHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComponentsHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700542424862963002E5670 /* ComponentsHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsHubTests.swift; sourceTree = "<group>"; };
 		4700542624862963002E5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4700543424862A73002E5670 /* ComponentHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentHub.swift; sourceTree = "<group>"; };
+		4700556B248734D7002E5670 /* ComponentHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComponentHub.swift; path = Sources/ComponentHub.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		4700543024862A73002E5670 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4700543424862A73002E5670 /* ComponentHub.swift */,
+				4700556B248734D7002E5670 /* ComponentHub.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					4700541524862963002E5670 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					4700541E24862963002E5670 = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -207,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4700543724862A73002E5670 /* ComponentHub.swift in Sources */,
+				4700556C248734D7002E5670 /* ComponentHub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4700542524862963002E5670 /* ComponentsHubTests.swift in Sources */,
-				4700543824862A73002E5670 /* ComponentHub.swift in Sources */,
+				4700556D248734D7002E5670 /* ComponentHub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +355,7 @@
 		4700542B24862963002E5670 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C59TVX3M53;
@@ -372,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JX.ComponentsHub;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,6 +383,7 @@
 		4700542C24862963002E5670 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C59TVX3M53;

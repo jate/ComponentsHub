@@ -16,7 +16,7 @@ public class StoreLib {
     public static func initialComponents() {
 
         ComponentsHub.shared.register(protocol: StoreProtocol.self) { () -> StoreProtocol in
-            let dataStore = UserDataStore()
+            let dataStore = RepositiesStore()
             return dataStore
         }
     }

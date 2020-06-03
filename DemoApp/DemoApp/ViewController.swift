@@ -8,6 +8,7 @@
 
 import UIKit
 import ComponentsHub
+import ProtocolLibrary
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         testStoreLib()
+        testStoreUsers()
 
         testNetLib()
 
@@ -36,10 +38,10 @@ class ViewController: UIViewController {
         // let lib = StoreLib()
 
         // Use Components Hub
-        let data = "d".data(using: .utf8)!
-        let _ = ComponentsHub.shared.store?.addOrUpdate(data: data)
+        //let data = "d".data(using: .utf8)!
+        //let _ = ComponentsHub.shared.store?.addOrUpdate(data: data)
 
-        let _ = ComponentsHub.shared.store?.remove(data: data)
+        //let _ = ComponentsHub.shared.store?.remove(data: data)
     }
 
     func testNetLib() {
@@ -55,6 +57,19 @@ class ViewController: UIViewController {
             }
 
         })
+    }
+
+    func testStoreUsers() {
+        let userLogic = ComponentsHub.shared.store?.user()
+
+        let user = DemoUserModel.init(name: "jate", password: "##$W@$@SFASDF")
+        userLogic!.saveUser(user)
+
+        for user in userLogic!.fetchUsers() {
+            print("user id: \(user.id), name: \(user.name)")
+
+            userLogic!.removeUser(by: user)
+        }
     }
 }
 

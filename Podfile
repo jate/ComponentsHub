@@ -11,6 +11,7 @@ target 'DemoApp' do
 #  use_frameworks! :linkage => :static
 
   pod 'RxSwift' , '5.1.1'
+  pod 'RealmSwift', '5.0.2'
 
   #target 'DemoApp_Tests' do
   #  inherit! :search_paths
@@ -26,6 +27,15 @@ target 'ComponentA' do
 
   pod 'RxSwift', '5.1.1'
 end
+
+target 'StoreLib' do
+  use_frameworks!
+
+  project 'StoreLib/StoreLib.xcodeproj'
+
+  pod 'RealmSwift', '5.0.2'
+
+  end
 
 
 post_install do |installer|

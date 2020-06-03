@@ -11,13 +11,9 @@ import ComponentsHub
 
 public protocol StoreProtocol {
 
-    func addOrUpdate(data: Data) -> Bool
-
-    func remove(data: Data) -> Bool
-
-
+    // for demo user model operation
+    func user() -> DemoUserLogic
 }
-
 
 extension ComponentsHub {
     public var store: StoreProtocol? {

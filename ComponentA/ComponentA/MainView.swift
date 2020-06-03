@@ -12,6 +12,8 @@ import UIKit
 import ComponentsHub
 import ProtocolLibrary
 
+import RxSwift
+
 class MainViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -28,12 +30,13 @@ class MainViewController: UIViewController {
             case .success(let data):
                 print("received data: \(data)")
 
-                ComponentsHub.shared.store?.addOrUpdate(data: data)
 
             case .failure(let e):
                 print("got error: \(e)")
             }
         })
+
+        testRxSwift()
     }
 
     lazy var label : UILabel = {
@@ -51,5 +54,13 @@ extension MainViewController {
 //        label.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 //        // label.heightAnchor.constraint(equalToConstant: 100).isActive = true
 //        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+}
+
+extension MainViewController {
+    func testRxSwift() {
+        Observable.of(1).subscribe({_ in
+
+            }).dispose()
     }
 }

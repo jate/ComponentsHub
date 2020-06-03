@@ -13,6 +13,7 @@
 		4700554724868888002E5670 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700554424868888002E5670 /* StoreProtocol.swift */; };
 		4700554B2486894B002E5670 /* ComponentsHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700554924868921002E5670 /* ComponentsHub.framework */; };
 		4700554C2486894B002E5670 /* ComponentsHub.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4700554924868921002E5670 /* ComponentsHub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4700557224875003002E5670 /* DemoUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700557124875003002E5670 /* DemoUserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		4700554224868888002E5670 /* NetApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetApiProtocol.swift; sourceTree = "<group>"; };
 		4700554424868888002E5670 /* StoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
 		4700554924868921002E5670 /* ComponentsHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentsHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4700557124875003002E5670 /* DemoUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4700554424868888002E5670 /* StoreProtocol.swift */,
+				4700557124875003002E5670 /* DemoUserModel.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				4700554624868888002E5670 /* NetApiProtocol.swift in Sources */,
 				4700554524868888002E5670 /* ComponentAProtocol.swift in Sources */,
 				4700554724868888002E5670 /* StoreProtocol.swift in Sources */,
+				4700557224875003002E5670 /* DemoUserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

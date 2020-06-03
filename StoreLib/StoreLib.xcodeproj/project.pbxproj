@@ -12,10 +12,13 @@
 		4700548B24862D32002E5670 /* StoreLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 4700547D24862D32002E5670 /* StoreLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4700549624862D89002E5670 /* StoreLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700549424862D89002E5670 /* StoreLib.swift */; };
 		4700549724862D89002E5670 /* StoreLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700549424862D89002E5670 /* StoreLib.swift */; };
-		4700549824862D89002E5670 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700549524862D89002E5670 /* UserDataStore.swift */; };
-		4700549924862D89002E5670 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700549524862D89002E5670 /* UserDataStore.swift */; };
+		4700549824862D89002E5670 /* RepositiesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700549524862D89002E5670 /* RepositiesStore.swift */; };
+		4700549924862D89002E5670 /* RepositiesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700549524862D89002E5670 /* RepositiesStore.swift */; };
 		47005550248689F7002E5670 /* ProtocolLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700554E248689EF002E5670 /* ProtocolLibrary.framework */; };
 		47005551248689F7002E5670 /* ProtocolLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4700554E248689EF002E5670 /* ProtocolLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47005574248754E1002E5670 /* DemoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47005573248754E1002E5670 /* DemoUser.swift */; };
+		47005576248755D9002E5670 /* RealmReposities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47005575248755D9002E5670 /* RealmReposities.swift */; };
+		85DD0914B47685FF007E5931 /* Pods_StoreLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFAC87887B32A5F87485A87 /* Pods_StoreLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2494D25C95AD33DB2FECA207 /* Pods-StoreLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreLib.release.xcconfig"; path = "Target Support Files/Pods-StoreLib/Pods-StoreLib.release.xcconfig"; sourceTree = "<group>"; };
+		377C90CF22E9D1284D046880 /* Pods-StoreLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreLib.debug.xcconfig"; path = "Target Support Files/Pods-StoreLib/Pods-StoreLib.debug.xcconfig"; sourceTree = "<group>"; };
+		3DFAC87887B32A5F87485A87 /* Pods_StoreLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoreLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700547A24862D32002E5670 /* StoreLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StoreLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700547D24862D32002E5670 /* StoreLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreLib.h; sourceTree = "<group>"; };
 		4700547E24862D32002E5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,9 +56,11 @@
 		4700548824862D32002E5670 /* StoreLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLibTests.swift; sourceTree = "<group>"; };
 		4700548A24862D32002E5670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4700549424862D89002E5670 /* StoreLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreLib.swift; sourceTree = "<group>"; };
-		4700549524862D89002E5670 /* UserDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		4700549524862D89002E5670 /* RepositiesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositiesStore.swift; sourceTree = "<group>"; };
 		4700549B24862E85002E5670 /* ComponentsHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentsHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700554E248689EF002E5670 /* ProtocolLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47005573248754E1002E5670 /* DemoUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoUser.swift; sourceTree = "<group>"; };
+		47005575248755D9002E5670 /* RealmReposities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmReposities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47005550248689F7002E5670 /* ProtocolLibrary.framework in Frameworks */,
+				85DD0914B47685FF007E5931 /* Pods_StoreLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +91,7 @@
 				4700548724862D32002E5670 /* StoreLibTests */,
 				4700547B24862D32002E5670 /* Products */,
 				4700549A24862E85002E5670 /* Frameworks */,
+				5E39E24E3FA31CE7143283C2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,9 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				4700549424862D89002E5670 /* StoreLib.swift */,
-				4700549524862D89002E5670 /* UserDataStore.swift */,
+				4700549524862D89002E5670 /* RepositiesStore.swift */,
 				4700547D24862D32002E5670 /* StoreLib.h */,
 				4700547E24862D32002E5670 /* Info.plist */,
+				47005573248754E1002E5670 /* DemoUser.swift */,
+				47005575248755D9002E5670 /* RealmReposities.swift */,
 			);
 			path = StoreLib;
 			sourceTree = "<group>";
@@ -119,8 +131,19 @@
 			children = (
 				4700554E248689EF002E5670 /* ProtocolLibrary.framework */,
 				4700549B24862E85002E5670 /* ComponentsHub.framework */,
+				3DFAC87887B32A5F87485A87 /* Pods_StoreLib.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E39E24E3FA31CE7143283C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				377C90CF22E9D1284D046880 /* Pods-StoreLib.debug.xcconfig */,
+				2494D25C95AD33DB2FECA207 /* Pods-StoreLib.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4700548E24862D32002E5670 /* Build configuration list for PBXNativeTarget "StoreLib" */;
 			buildPhases = (
+				9B1C0485EA37C373D9C9D53A /* [CP] Check Pods Manifest.lock */,
 				4700547524862D32002E5670 /* Headers */,
 				4700547624862D32002E5670 /* Sources */,
 				4700547724862D32002E5670 /* Frameworks */,
@@ -229,12 +253,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B1C0485EA37C373D9C9D53A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StoreLib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4700547624862D32002E5670 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4700549824862D89002E5670 /* UserDataStore.swift in Sources */,
+				47005576248755D9002E5670 /* RealmReposities.swift in Sources */,
+				47005574248754E1002E5670 /* DemoUser.swift in Sources */,
+				4700549824862D89002E5670 /* RepositiesStore.swift in Sources */,
 				4700549624862D89002E5670 /* StoreLib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4700549924862D89002E5670 /* UserDataStore.swift in Sources */,
+				4700549924862D89002E5670 /* RepositiesStore.swift in Sources */,
 				4700548924862D32002E5670 /* StoreLibTests.swift in Sources */,
 				4700549724862D89002E5670 /* StoreLib.swift in Sources */,
 			);
@@ -382,6 +433,7 @@
 		};
 		4700548F24862D32002E5670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377C90CF22E9D1284D046880 /* Pods-StoreLib.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -409,6 +461,7 @@
 		};
 		4700549024862D32002E5670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2494D25C95AD33DB2FECA207 /* Pods-StoreLib.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

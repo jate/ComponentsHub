@@ -24,13 +24,13 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/jate/ComponentsHub'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jate' => 'jate_xu@icloud.com' }
+  s.author           = { 'jate_xu' => 'jate_xu@icloud.com' }
   s.source           = { :git => 'https://github.com/jate/ComponentsHub.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ComponentsHub/ComponentsHub/Sources/**/*'
+  s.source_files = 'ComponentsHub/ComponentsHub/Sources/**/*.swift'
   
   # s.resource_bundles = {
   #   'ComponentsHub' => ['ComponentsHub/Assets/*.png']

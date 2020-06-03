@@ -1,26 +1,40 @@
 PODS:
+  - Alamofire (5.2.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
   - Realm (5.0.2):
     - Realm/Headers (= 5.0.2)
   - Realm/Headers (5.0.2)
   - RealmSwift (5.0.2):
     - Realm (= 5.0.2)
   - RxSwift (5.1.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Moya (= 14.0.0)
   - RealmSwift (= 5.0.2)
   - RxSwift (= 5.1.1)
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Moya
     - Realm
     - RealmSwift
     - RxSwift
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
   RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 27d7ffd3c2b6e0a1c0523121ca3df33a0cedb781
+PODFILE CHECKSUM: 6f6c0c4459087fdc8eb403e3996c8cb17e68873e
 
 COCOAPODS: 1.9.1

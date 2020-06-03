@@ -25,16 +25,10 @@ class MainViewController: UIViewController {
 
         layout()
 
-        ComponentsHub.shared.netApi?.searchRepositories(query: "data", completion: { result in
-            switch(result) {
-            case .success(let data):
-                print("received data: \(data)")
-
-
-            case .failure(let e):
-                print("got error: \(e)")
-            }
-        })
+        let github = ComponentsHub.shared.netApi?.github()
+        github?.searchReposities(query: "ComponentsHub") { items in
+            print("got items: \(items)")
+        }
 
         testRxSwift()
     }

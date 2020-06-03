@@ -10,12 +10,20 @@ import Foundation
 
 import ComponentsHub
 
+public protocol Cancelable {
+    var isCancelled: Bool { get }
+    func cancel()
+}
+
+public protocol Printable {
+    func print()
+}
+
 public protocol NetApiProtocol {
 
-    var scheme: String { get }
-    var host: String { get }
+    func github() -> Github
 
-    func searchRepositories(query: String, completion: @escaping (Result<Data, Error>) -> Void)
+    func user() -> User
 }
 
 extension ComponentsHub {

@@ -12,6 +12,8 @@ target 'DemoApp' do
 
   pod 'RxSwift' , '5.1.1'
   pod 'RealmSwift', '5.0.2'
+  pod 'Moya', '14.0.0'
+  pod 'SwiftyJSON'
 
   #target 'DemoApp_Tests' do
   #  inherit! :search_paths
@@ -36,6 +38,16 @@ target 'StoreLib' do
   pod 'RealmSwift', '5.0.2'
 
   end
+
+target 'NetworkLib' do
+  use_frameworks!
+
+  project 'NetworkLib/NetworkLib.xcodeproj'
+
+  pod 'Moya', '14.0.0'
+  pod 'SwiftyJSON'
+
+end
 
 
 post_install do |installer|

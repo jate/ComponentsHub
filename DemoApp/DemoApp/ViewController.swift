@@ -47,16 +47,10 @@ class ViewController: UIViewController {
     func testNetLib() {
 
         // Use Components Hub
-        let _ = ComponentsHub.shared.netApi?.searchRepositories(query: "", completion: { result in
-
-            switch(result) {
-            case .success(let data):
-                print("received data: \(data)")
-            case .failure(let e):
-                print("got error: \(e)")
-            }
-
-        })
+        let github = ComponentsHub.shared.netApi?.github()
+        github?.searchReposities(query: "ComponentsHub") { items in
+            print("items: \(items)")
+        }
     }
 
     func testStoreUsers() {

@@ -25,12 +25,3 @@ public struct DemoUserModel {
         }
     }
 }
-
-public protocol DemoUserLogic {
-    func saveUser(_ model: DemoUserModel) -> Bool
-
-    func removeUser(by id: String) -> Bool
-    func removeUser(by model: DemoUserModel) -> Bool
-
-    func fetchUsers() -> [DemoUserModel]
-}

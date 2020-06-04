@@ -14,7 +14,7 @@ import Alamofire
 import Moya
 
 public enum UserService {
-    case info(info: String?, _ method: HTTPMethod = .get)
+    case info(userName: String?, _ method: HTTPMethod = .get)
 
 }
 
@@ -41,8 +41,16 @@ extension UserService: TargetType {
     }
     public var sampleData: Data {
         switch self {
-        case .info(_, _):
-            return "{key: value}".data(using: .utf8)!
+        case .info(_, let method):
+            if method == .get {
+                return """
+                    {"id": "ADDFSG-ASDF@#$-#$%SDFA-dddd",
+                    "name": "ComponentsHub",
+                    "password": "ADFGBEEBVLL",
+                    "info":"A Sample Component Communication Library"}
+                    """.data(using: .utf8)!
+            }
+            return "{code:200, message:'ok'}".data(using: .utf8)!
         }
     }
     public var headers: [String: String]? {
@@ -52,19 +60,29 @@ extension UserService: TargetType {
 
 class UserImpl : User {
 
-    lazy var provider = MoyaProvider<UserService>()
+    // NOTE: 这里的 stub 表示2s内请求不成功，则返回sample data
+    lazy var provider = MoyaProvider<UserService>(stubClosure:MoyaProvider.delayedStub(2), trackInflights: true)
 
-    func getUserInfo(completion: @escaping () -> Void) -> Cancelable {
+    @discardableResult
+    func getUserInfo(name: String, completion: @escaping (DemoUserModel?) -> Void) -> Cancelable {
 
-        return provider.request(.info(info: nil, .get)) { result in
+        return provider.request(.info(userName: name)) { result in
             switch result {
             case .success(let response):
-                print("success")
-            case .failure(let error):
+                var model: DemoUserModel?
+                do {
+                    model = try response.map(to: DemoUserModel.self)
+                } catch let e {
+                    print("catch error: \(e)")
+                    completion(nil)
+                    return
+                }
+                completion(model)
+            case .failure(_):
                 print("fail")
             }
 
-            completion()
+            completion(nil)
         }.asCancellable()
     }
 

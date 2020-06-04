@@ -9,6 +9,7 @@
 import Foundation
 
 public protocol User {
-    func getUserInfo(completion: @escaping () -> Void) -> Cancelable
+    @discardableResult
+    func getUserInfo(name: String, completion: @escaping (DemoUserModel?) -> Void) -> Cancelable
 }
 

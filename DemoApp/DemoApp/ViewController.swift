@@ -51,6 +51,13 @@ class ViewController: UIViewController {
         github?.searchReposities(query: "ComponentsHub") { items in
             print("items: \(items)")
         }
+
+        let user = ComponentsHub.shared.netApi?.user()
+        user?.getUserInfo(name: "XXX") {
+            if let info = $0 {
+                print("info: \(info)")
+            }
+        }
     }
 
     func testStoreUsers() {

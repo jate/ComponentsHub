@@ -17,6 +17,7 @@
 		470055892487A3D7002E5670 /* MoyaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470055882487A3D7002E5670 /* MoyaExtension.swift */; };
 		47435F442487E55B00F8D654 /* SwiftJSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F432487E55B00F8D654 /* SwiftJSONAble.swift */; };
 		47435F472487EA3F00F8D654 /* GithubReposityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F462487EA3F00F8D654 /* GithubReposityItem.swift */; };
+		47435F5424887CC400F8D654 /* JSONAbleDemoUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F5324887CC400F8D654 /* JSONAbleDemoUserModel.swift */; };
 		E874414EB00BC85C41029554 /* Pods_NetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95B3F465772D255AABD952 /* Pods_NetworkLib.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		470055882487A3D7002E5670 /* MoyaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaExtension.swift; sourceTree = "<group>"; };
 		47435F432487E55B00F8D654 /* SwiftJSONAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONAble.swift; sourceTree = "<group>"; };
 		47435F462487EA3F00F8D654 /* GithubReposityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposityItem.swift; sourceTree = "<group>"; };
+		47435F5324887CC400F8D654 /* JSONAbleDemoUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAbleDemoUserModel.swift; sourceTree = "<group>"; };
 		4E95B3F465772D255AABD952 /* Pods_NetworkLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5028163AC829D04ED64DCB0A /* Pods-NetworkLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLib.release.xcconfig"; path = "Target Support Files/Pods-NetworkLib/Pods-NetworkLib.release.xcconfig"; sourceTree = "<group>"; };
 		B2A639DBEBFE289D7EFE1A96 /* Pods-NetworkLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLib.debug.xcconfig"; path = "Target Support Files/Pods-NetworkLib/Pods-NetworkLib.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				47435F462487EA3F00F8D654 /* GithubReposityItem.swift */,
+				47435F5324887CC400F8D654 /* JSONAbleDemoUserModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47435F5424887CC400F8D654 /* JSONAbleDemoUserModel.swift in Sources */,
 				470054E024863412002E5670 /* NetworkLib.swift in Sources */,
 				47005581248792B2002E5670 /* GithubImpl.swift in Sources */,
 				4700558524879646002E5670 /* UserImpl.swift in Sources */,

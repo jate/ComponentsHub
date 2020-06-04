@@ -12,25 +12,11 @@ import ProtocolLibrary
 
 class ViewController: UIViewController {
 
+    @IBOutlet private(set) weak var loginBtn: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
-        testStoreLib()
-        testStoreUsers()
-
-        testNetLib()
-
-
-    }
-
-    @IBAction func buttonClicked() {
-        guard let vc = ComponentsHub.shared.comA?.getComponentAMainViewController(title: "Test") else {
-            return
-        }
-
-        let nav = UINavigationController.init(rootViewController: vc)
-        self.navigationController?.present(nav, animated: true, completion: nil)
     }
 
     func testStoreLib() {
@@ -43,34 +29,41 @@ class ViewController: UIViewController {
 
         //let _ = ComponentsHub.shared.store?.remove(data: data)
     }
+}
 
-    func testNetLib() {
-
-        // Use Components Hub
-        let github = ComponentsHub.shared.netApi?.github()
-        github?.searchReposities(query: "ComponentsHub") { items in
-            print("items: \(items)")
+extension ViewController {
+    @IBAction func componentAButtonClicked() {
+        guard let vc = ComponentsHub.shared.comA?.getComponentAMainViewController(title: "Test") else {
+            return
         }
 
-        let user = ComponentsHub.shared.netApi?.user()
-        user?.getUserInfo(name: "XXX") {
-            if let info = $0 {
-                print("info: \(info)")
-            }
-        }
-    }
-
-    func testStoreUsers() {
-        let userLogic = ComponentsHub.shared.store?.user()
-
-        let user = DemoUserModel.init(name: "jate", password: "##$W@$@SFASDF")
-        userLogic!.saveUser(user)
-
-        for user in userLogic!.fetchUsers() {
-            print("user id: \(user.id), name: \(user.name)")
-
-            userLogic!.removeUser(by: user)
-        }
+        let nav = UINavigationController.init(rootViewController: vc)
+        self.navigationController?.present(nav, animated: true, completion: nil)
     }
 }
 
+extension ViewController : UserLoginDelegate {
+
+    @IBAction func loginButtonClicked() {
+        guard let vc = ComponentsHub.shared.login?.getUserLoginViewController(loginDelegate: self) else {
+            return
+        }
+        self.navigationController?.present(vc, animated: true, completion: nil)
+    }
+
+    func userLoginSuccess(_ info: String) {
+
+        let userLogic = ComponentsHub.shared.store?.user()
+
+        _ = userLogic?.fetchUsers().map {
+            userLogic?.removeUser(by: $0)
+        }
+        _ = userLogic?.saveUser(DemoUserModel.init(name: "jate", password: "##$W@$@SFASDF", info: info))
+
+        loginBtn.setTitle("User Has Logined!", for: .normal)
+    }
+
+    func userLoginFailure() {
+
+    }
+}

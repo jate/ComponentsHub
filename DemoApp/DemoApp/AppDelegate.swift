@@ -11,6 +11,7 @@ import ComponentsHub
 import StoreLib
 import NetworkLib
 import ComponentA
+import UserLogin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         StoreLib.initialComponents()
         NetworkLib.initialComponents()
         ComponentA.initialComponents()
+        UserLogin.initialComponents()
 
         return true
     }

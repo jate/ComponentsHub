@@ -32,25 +32,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqK-a6-6F7">
-                                <rect key="frame" x="105.5" y="433" width="203" height="30"/>
+                                <rect key="frame" x="89" y="433" width="236" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="203" id="1GZ-0Y-fJw"/>
                                     <constraint firstAttribute="height" constant="30" id="MJW-d0-zie"/>
                                 </constraints>
-                                <state key="normal" title="Prenset ComponentA MainVC"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Goto ComponentA MainVC"/>
                                 <connections>
-                                    <action selector="buttonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="PnH-DB-fhz"/>
+                                    <action selector="componentAButtonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="ruA-5v-An8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlM-to-co7">
+                                <rect key="frame" x="65.5" y="353" width="283" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wsg-Q7-GMr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Click me goto UserLogin Modual">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cnj-6J-6NI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="XlM-to-co7" firstAttribute="centerX" secondItem="PqK-a6-6F7" secondAttribute="centerX" id="6mq-rp-WsA"/>
                             <constraint firstItem="PqK-a6-6F7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HyO-lE-51R"/>
                             <constraint firstItem="PqK-a6-6F7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q5a-40-kfs"/>
+                            <constraint firstItem="PqK-a6-6F7" firstAttribute="top" secondItem="XlM-to-co7" secondAttribute="bottom" constant="30" id="Tc1-GT-48c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4dV-Z4-A72"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="XlM-to-co7" id="RcL-ZE-gmm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

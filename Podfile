@@ -11,10 +11,12 @@ target 'DemoApp' do
 #  use_frameworks! :linkage => :static
 
   pod 'RxSwift' , '5.1.1'
+  pod 'RxCocoa' , '5.1.1'
   pod 'RealmSwift', '5.0.2'
   pod 'Moya', '14.0.0'
   pod 'SwiftyJSON'
-
+  pod 'NVActivityIndicatorView'
+  
   #target 'DemoApp_Tests' do
   #  inherit! :search_paths
   #  pod 'Kiwi'
@@ -27,7 +29,7 @@ target 'ComponentA' do
 
   project 'ComponentA/ComponentA.xcodeproj'
 
-  pod 'RxSwift', '5.1.1'
+  pod 'RxSwift' , '5.1.1'
 end
 
 target 'StoreLib' do
@@ -49,6 +51,32 @@ target 'NetworkLib' do
 
 end
 
+target 'UserLogin' do
+  use_frameworks!
+
+  project 'UserLoginDemo/UserLoginDemo.xcodeproj'
+
+  pod 'RxSwift' , '5.1.1'
+  pod 'RxCocoa' , '5.1.1'
+
+  pod 'NVActivityIndicatorView'
+
+end
+
+target 'UserLoginDemo' do
+  use_frameworks!
+
+  project 'UserLoginDemo/UserLoginDemo.xcodeproj'
+
+  pod 'RxSwift' , '5.1.1'
+  pod 'RxCocoa' , '5.1.1'
+  pod 'RealmSwift', '5.0.2'
+  pod 'Moya', '14.0.0'
+  pod 'SwiftyJSON'
+
+  pod 'NVActivityIndicatorView'
+
+end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

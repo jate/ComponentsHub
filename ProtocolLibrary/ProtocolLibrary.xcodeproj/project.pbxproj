@@ -14,6 +14,7 @@
 		4700554B2486894B002E5670 /* ComponentsHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700554924868921002E5670 /* ComponentsHub.framework */; };
 		4700554C2486894B002E5670 /* ComponentsHub.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4700554924868921002E5670 /* ComponentsHub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4700557224875003002E5670 /* DemoUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700557124875003002E5670 /* DemoUserModel.swift */; };
+		47044D9A2488EA08004838E3 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47044D992488EA08004838E3 /* LoginService.swift */; };
 		47435F342487DF6F00F8D654 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F322487DF6F00F8D654 /* GithubService.swift */; };
 		47435F352487DF6F00F8D654 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F332487DF6F00F8D654 /* UserService.swift */; };
 		47435F4D2488785C00F8D654 /* GithubReposityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F492488785C00F8D654 /* GithubReposityModel.swift */; };
@@ -21,6 +22,7 @@
 		47435F4F2488785C00F8D654 /* GithubReposityOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F4B2488785C00F8D654 /* GithubReposityOwner.swift */; };
 		47435F502488785C00F8D654 /* GithubReposityLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F4C2488785C00F8D654 /* GithubReposityLicense.swift */; };
 		47435F522488788900F8D654 /* DemoUserLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F512488788900F8D654 /* DemoUserLogic.swift */; };
+		47435F98248893A900F8D654 /* UserLoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F97248893A900F8D654 /* UserLoginProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +48,7 @@
 		4700554424868888002E5670 /* StoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
 		4700554924868921002E5670 /* ComponentsHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ComponentsHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700557124875003002E5670 /* DemoUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUserModel.swift; sourceTree = "<group>"; };
+		47044D992488EA08004838E3 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		47435F322487DF6F00F8D654 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		47435F332487DF6F00F8D654 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		47435F492488785C00F8D654 /* GithubReposityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubReposityModel.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		47435F4B2488785C00F8D654 /* GithubReposityOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubReposityOwner.swift; sourceTree = "<group>"; };
 		47435F4C2488785C00F8D654 /* GithubReposityLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubReposityLicense.swift; sourceTree = "<group>"; };
 		47435F512488788900F8D654 /* DemoUserLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUserLogic.swift; sourceTree = "<group>"; };
+		47435F97248893A900F8D654 /* UserLoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				47435F482488785C00F8D654 /* models */,
+				47435F962488939800F8D654 /* Login */,
 				4700553F24868888002E5670 /* ComponentA */,
 				4700554124868888002E5670 /* Network */,
 				4700554324868888002E5670 /* Store */,
@@ -108,6 +113,7 @@
 		4700554124868888002E5670 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				47044D992488EA08004838E3 /* LoginService.swift */,
 				47435F322487DF6F00F8D654 /* GithubService.swift */,
 				47435F332487DF6F00F8D654 /* UserService.swift */,
 				4700554224868888002E5670 /* NetApiProtocol.swift */,
@@ -142,6 +148,14 @@
 				47435F4C2488785C00F8D654 /* GithubReposityLicense.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		47435F962488939800F8D654 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				47435F97248893A900F8D654 /* UserLoginProtocol.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +238,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47435F98248893A900F8D654 /* UserLoginProtocol.swift in Sources */,
+				47044D9A2488EA08004838E3 /* LoginService.swift in Sources */,
 				4700554624868888002E5670 /* NetApiProtocol.swift in Sources */,
 				47435F4F2488785C00F8D654 /* GithubReposityOwner.swift in Sources */,
 				4700554524868888002E5670 /* ComponentAProtocol.swift in Sources */,

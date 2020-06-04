@@ -24,6 +24,8 @@ public protocol NetApiProtocol {
     func github() -> Github
 
     func user() -> User
+
+    func userLogin() -> UserLogin
 }
 
 extension ComponentsHub {

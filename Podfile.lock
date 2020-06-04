@@ -4,17 +4,27 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
   - Realm (5.0.2):
     - Realm/Headers (= 5.0.2)
   - Realm/Headers (5.0.2)
   - RealmSwift (5.0.2):
     - Realm (= 5.0.2)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Moya (= 14.0.0)
+  - NVActivityIndicatorView
   - RealmSwift (= 5.0.2)
+  - RxCocoa (= 5.1.1)
   - RxSwift (= 5.1.1)
   - SwiftyJSON
 
@@ -22,19 +32,25 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
+    - NVActivityIndicatorView
     - Realm
     - RealmSwift
+    - RxCocoa
+    - RxRelay
     - RxSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
   RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6f6c0c4459087fdc8eb403e3996c8cb17e68873e
+PODFILE CHECKSUM: 63d1c623923c3935ad89282fa7e6e7394f77bfee
 
 COCOAPODS: 1.9.1

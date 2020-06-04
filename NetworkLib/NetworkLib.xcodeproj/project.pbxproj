@@ -15,6 +15,7 @@
 		47005581248792B2002E5670 /* GithubImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47005580248792B2002E5670 /* GithubImpl.swift */; };
 		4700558524879646002E5670 /* UserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700558424879646002E5670 /* UserImpl.swift */; };
 		470055892487A3D7002E5670 /* MoyaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470055882487A3D7002E5670 /* MoyaExtension.swift */; };
+		47044D9E2488F58E004838E3 /* UserLoginImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47044D9D2488F58E004838E3 /* UserLoginImpl.swift */; };
 		47435F442487E55B00F8D654 /* SwiftJSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F432487E55B00F8D654 /* SwiftJSONAble.swift */; };
 		47435F472487EA3F00F8D654 /* GithubReposityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F462487EA3F00F8D654 /* GithubReposityItem.swift */; };
 		47435F5424887CC400F8D654 /* JSONAbleDemoUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47435F5324887CC400F8D654 /* JSONAbleDemoUserModel.swift */; };
@@ -46,6 +47,7 @@
 		47005580248792B2002E5670 /* GithubImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubImpl.swift; sourceTree = "<group>"; };
 		4700558424879646002E5670 /* UserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImpl.swift; sourceTree = "<group>"; };
 		470055882487A3D7002E5670 /* MoyaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaExtension.swift; sourceTree = "<group>"; };
+		47044D9D2488F58E004838E3 /* UserLoginImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginImpl.swift; sourceTree = "<group>"; };
 		47435F432487E55B00F8D654 /* SwiftJSONAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONAble.swift; sourceTree = "<group>"; };
 		47435F462487EA3F00F8D654 /* GithubReposityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposityItem.swift; sourceTree = "<group>"; };
 		47435F5324887CC400F8D654 /* JSONAbleDemoUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAbleDemoUserModel.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				470054D4248631A4002E5670 /* Info.plist */,
 				47005580248792B2002E5670 /* GithubImpl.swift */,
 				4700558424879646002E5670 /* UserImpl.swift */,
+				47044D9D2488F58E004838E3 /* UserLoginImpl.swift */,
 				470055882487A3D7002E5670 /* MoyaExtension.swift */,
 				47435F432487E55B00F8D654 /* SwiftJSONAble.swift */,
 			);
@@ -245,6 +248,7 @@
 				47435F442487E55B00F8D654 /* SwiftJSONAble.swift in Sources */,
 				470055892487A3D7002E5670 /* MoyaExtension.swift in Sources */,
 				470054E224863664002E5670 /* NetApiServices.swift in Sources */,
+				47044D9E2488F58E004838E3 /* UserLoginImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

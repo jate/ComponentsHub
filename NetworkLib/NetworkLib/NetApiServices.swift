@@ -21,4 +21,7 @@ class NetApiServices : NetApiProtocol {
         return UserImpl()
     }
 
+    func userLogin() -> UserLogin {
+        return UserLoginImpl()
+    }
 }

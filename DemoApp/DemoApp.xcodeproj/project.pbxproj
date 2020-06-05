@@ -55,7 +55,6 @@
 		4700555324868B31002E5670 /* ProtocolLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47005578248773E4002E5670 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700557B248773F1002E5670 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47044DA424892F9D004838E3 /* CopyNotEmebedStaticFrameworkStoryboard.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CopyNotEmebedStaticFrameworkStoryboard.sh; sourceTree = "<group>"; };
 		47044DA624892FBE004838E3 /* UserLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UserLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		788524033FF52E34612FF175 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		9E45B79C4920BF01D2483103 /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +100,6 @@
 		470054A924862F1B002E5670 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				47044DA324892F9D004838E3 /* script */,
 				470054AA24862F1B002E5670 /* AppDelegate.swift */,
 				470054AC24862F1B002E5670 /* SceneDelegate.swift */,
 				470054AE24862F1C002E5670 /* ViewController.swift */,
@@ -127,14 +125,6 @@
 				9E45B79C4920BF01D2483103 /* Pods_DemoApp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		47044DA324892F9D004838E3 /* script */ = {
-			isa = PBXGroup;
-			children = (
-				47044DA424892F9D004838E3 /* CopyNotEmebedStaticFrameworkStoryboard.sh */,
-			);
-			path = script;
 			sourceTree = "<group>";
 		};
 		CBF0C8305CBB887C3F3D30D3 /* Pods */ = {
@@ -224,8 +214,10 @@
 			files = (
 			);
 			inputFileListPaths = (
+				"",
 			);
 			inputPaths = (
+				"${CONFIGURATION_BUILD_DIR}/UserLogin.framework",
 			);
 			name = "Copy Not Emebed Static Framework Storyboard Files";
 			outputFileListPaths = (
@@ -234,7 +226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/DemoApp/script/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#\"${SRCROOT}/DemoApp/script/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n\n${SCRIPT_INPUT_FILE_0}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n\n## 如果有新加入的文件，需要打开以下脚本\n#${SCRIPT_INPUT_FILE_1}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n#${SCRIPT_INPUT_FILE_2}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n#${SCRIPT_INPUT_FILE_3}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n";
 		};
 		5A658EA07715771798CBACFB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

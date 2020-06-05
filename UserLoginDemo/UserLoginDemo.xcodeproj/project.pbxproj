@@ -31,7 +31,7 @@
 		47435FA12488992B00F8D654 /* StoreLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47435F9E2488992B00F8D654 /* StoreLib.framework */; };
 		47435FA324889A9600F8D654 /* ProtocolLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47435F8F2488927E00F8D654 /* ProtocolLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47435FAF2488AAD900F8D654 /* UserLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47435FAE2488AAC500F8D654 /* UserLogin.storyboard */; };
-		47435FB72488B77F00F8D654 /* CopyNotEmebedStaticFrameworkStoryboard.sh in Resources */ = {isa = PBXBuildFile; fileRef = 47435FB62488B77F00F8D654 /* CopyNotEmebedStaticFrameworkStoryboard.sh */; };
+		47E510B1248A20E8008DCE7A /* CopyNotEmebedStaticFrameworkStoryboard.sh in Resources */ = {isa = PBXBuildFile; fileRef = 47E510B0248A20E8008DCE7A /* CopyNotEmebedStaticFrameworkStoryboard.sh */; };
 		EA83EDC3F3140AE4E20ED7D1 /* Pods_UserLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280959A4ED5798A2067808E3 /* Pods_UserLogin.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +105,7 @@
 		47435F9D2488992B00F8D654 /* NetworkLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47435F9E2488992B00F8D654 /* StoreLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StoreLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47435FAE2488AAC500F8D654 /* UserLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserLogin.storyboard; sourceTree = "<group>"; };
-		47435FB62488B77F00F8D654 /* CopyNotEmebedStaticFrameworkStoryboard.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CopyNotEmebedStaticFrameworkStoryboard.sh; sourceTree = "<group>"; };
+		47E510B0248A20E8008DCE7A /* CopyNotEmebedStaticFrameworkStoryboard.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CopyNotEmebedStaticFrameworkStoryboard.sh; sourceTree = "<group>"; };
 		74672C224572A5956FEF4703 /* Pods-UserLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserLogin.release.xcconfig"; path = "Target Support Files/Pods-UserLogin/Pods-UserLogin.release.xcconfig"; sourceTree = "<group>"; };
 		EFBAED366FBB51E116FA64C6 /* Pods-UserLoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserLoginDemo.debug.xcconfig"; path = "Target Support Files/Pods-UserLoginDemo/Pods-UserLoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F254C4AA8D0198D92AB38E46 /* Pods_UserLoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserLoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +162,6 @@
 		47435F552488879800F8D654 = {
 			isa = PBXGroup;
 			children = (
-				47435FB62488B77F00F8D654 /* CopyNotEmebedStaticFrameworkStoryboard.sh */,
 				47435F602488879800F8D654 /* UserLoginDemo */,
 				47435F7B248887EF00F8D654 /* UserLogin */,
 				47435F5F2488879800F8D654 /* Products */,
@@ -197,6 +196,7 @@
 		47435F7B248887EF00F8D654 /* UserLogin */ = {
 			isa = PBXGroup;
 			children = (
+				47E510AF248A20E8008DCE7A /* Script */,
 				47044D962488E6D2004838E3 /* Utils */,
 				47435F882488887100F8D654 /* View */,
 				47435F872488887100F8D654 /* ViewModel */,
@@ -222,6 +222,14 @@
 				47435FAE2488AAC500F8D654 /* UserLogin.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		47E510AF248A20E8008DCE7A /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				47E510B0248A20E8008DCE7A /* CopyNotEmebedStaticFrameworkStoryboard.sh */,
+			);
+			path = Script;
 			sourceTree = "<group>";
 		};
 		D0CADB791437AF3C836CF6B8 /* Frameworks */ = {
@@ -340,7 +348,6 @@
 				47435F6E2488879A00F8D654 /* LaunchScreen.storyboard in Resources */,
 				47435F6B2488879A00F8D654 /* Assets.xcassets in Resources */,
 				47435F692488879800F8D654 /* Main.storyboard in Resources */,
-				47435FB72488B77F00F8D654 /* CopyNotEmebedStaticFrameworkStoryboard.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47435FAF2488AAD900F8D654 /* UserLogin.storyboard in Resources */,
+				47E510B1248A20E8008DCE7A /* CopyNotEmebedStaticFrameworkStoryboard.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +371,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${CONFIGURATION_BUILD_DIR}/UserLogin.framework",
 			);
 			name = "Copy UserLogin Resources";
 			outputFileListPaths = (
@@ -371,7 +380,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#\"${SRCROOT}/DemoApp/script/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n\n${SCRIPT_INPUT_FILE_0}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n\n## 如果有新加入的文件，需要打开以下脚本\n#${SCRIPT_INPUT_FILE_1}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n#${SCRIPT_INPUT_FILE_2}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n#${SCRIPT_INPUT_FILE_3}\"/CopyNotEmebedStaticFrameworkStoryboard.sh\"\n";
 		};
 		9DADD7EF1E9E7CDCAC99921C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

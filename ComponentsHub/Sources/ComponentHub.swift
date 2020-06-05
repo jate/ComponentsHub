@@ -76,8 +76,8 @@ extension ComponentsHub {
 
 extension ComponentsHub {
     func checkExsit(key: String) -> Bool {
-        if let _ = singletons[key],
-            let _ = instancesClosures[key] {
+        if singletons[key] != nil
+            || instancesClosures[key] != nil {
             return true
         }
         return false
